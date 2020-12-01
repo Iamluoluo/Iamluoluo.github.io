@@ -1,408 +1,552 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+	<title>洛洛</title>
+	<meta charset="utf-8">
 
+	<!-- 引入配置文件 -->
+	
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"iamluoluo.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="我将在这里与你分享生活中的点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="请叫我洛洛">
-<meta property="og:url" content="https://iamluoluo.github.io/archives/2020/index.html">
-<meta property="og:site_name" content="请叫我洛洛">
-<meta property="og:description" content="我将在这里与你分享生活中的点点滴滴">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="洛洛">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://iamluoluo.github.io/archives/2020/">
+	<!-- 字体图片库 -->
+	
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
+	<!-- 代码高亮库 -->
+	
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
 
-  <title>归档 | 请叫我洛洛</title>
-  
+	
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
 
+	<div id="main">
+		<!-- 引入侧边栏 -->
+		<aside>
+			
+<style type="text/css">
+.site-author-name {
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0;
+    text-align: center;}
+#nav img {
 
+	display: block;
+	margin: 0 auto;
+	max-width: 50px;
+	padding: 2px;
+	border-radius: 100%;
+	text-align: left;}
+.site-description {
+    color: #999;
+    font-size: 0.8125em;
+    margin-top: 0;
+    text-align: center;
+}
 
+.site-author-image {
+    border: 1px solid #eee;
+    display: block;
+    margin: 50px auto 0;
+    max-width: 100px;
+    padding: 2px;
+    border-radius: 0%;
+}
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">请叫我洛洛</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
+</style>
+<!-- 搜索栏 -->
+<div id="search">
+	<input class="search-input" type="text" placeholder="search">
+	<i id="search-icon" class="fa fa-bars" title="切换目录与索引"></i>
 </div>
 
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content archive">
-            
-
-  
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
-
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-27T21:29:43+08:00"
-              content="2020-11-27">
-          11-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/27/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95-%E6%B3%A8%E5%86%8C%E8%A1%A8/" itemprop="url">
-            <span itemprop="name">未命名</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-27T13:54:29+08:00"
-              content="2020-11-27">
-          11-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/27/hexo%E6%90%AD%E9%85%8Dgithub%E4%BD%BF%E7%94%A8typora%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-            <span itemprop="name">hexo搭配github使用typora搭建博客</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-26T14:19:24+08:00"
-              content="2020-11-26">
-          11-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/26/%E5%AB%A6%E5%A8%A5/" itemprop="url">
-            <span itemprop="name">嫦娥号</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-21T12:19:40+08:00"
-              content="2020-11-21">
-          11-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/21/%E5%8B%BF%E5%BF%98%E6%88%91/" itemprop="url">
-            <span itemprop="name">勿忘我</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
-    </div>
-  </div>
-  
-  
-  
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="洛洛"
-      src="https://jbox.sjtu.edu.cn:10081/thumb/files/databox/?delivery_code=2a72be4bc3954835b66715ba11eed407&delivery_token=eyJwd2QiOiIiLCJleHBpcmF0aW9uIjoxNjA2NDQ3ODgxMjY1LCJjb2RlIjoiMmE3MmJlNGJjMzk1NDgzNWI2NjcxNWJhMTFlZWQ0MDciLCJtb2RlIjoicnAifQ==&preview_type=origin&user_op=preview">
+<div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="洛洛" src="https://jbox.sjtu.edu.cn:10081/thumb/files/databox/?delivery_code=2a72be4bc3954835b66715ba11eed407&amp;delivery_token=eyJwd2QiOiIiLCJleHBpcmF0aW9uIjoxNjA2NDQ3ODgxMjY1LCJjb2RlIjoiMmE3MmJlNGJjMzk1NDgzNWI2NjcxNWJhMTFlZWQ0MDciLCJtb2RlIjoicnAifQ==&amp;preview_type=origin&amp;user_op=preview">
   <p class="site-author-name" itemprop="name">洛洛</p>
   <div class="site-description" itemprop="description">我将在这里与你分享生活中的点点滴滴</div>
+		<!-- 引入导航 -->
+	<nav>
+		<ul id="menu">
+
+	
+	
+    <li class="menu-item">
+        <a href="/" class="menu-item-link">主页</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/about" class="menu-item-link">关于</a>
+    </li>
+    
+
+    
+    
+    <li class="menu-item">
+        <a href="https://iamluoluo.github.io/" class="menu-item-link" target="_blank">BLOG</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="909323404" class="menu-item-link" target="_blank">QQ</a>
+    </li>
+    
+
+</ul>
+
+	</nav>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+	
+
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								关于她
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/2020/11/21/关于她/勿忘我/">
+								<i class="fa fa-file"></i>
+								勿忘我
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+						
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/兴起/">
+								<i class="fa fa-file"></i>
+								兴起
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								创想
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/2020/11/29/创想/产品·手机浏览器/">
+								<i class="fa fa-file"></i>
+								产品·手机浏览器
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/11/29/创想/好的产品·软件类/">
+								<i class="fa fa-file"></i>
+								好的产品·软件类
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+						
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/压死骆驼的最后一根稻草/">
+								<i class="fa fa-file"></i>
+								压死骆驼的最后一根稻草
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								技术
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/2020/11/27/技术/hexo搭配github使用typora搭建博客/">
+								<i class="fa fa-file"></i>
+								hexo搭配github使用typora搭建博客
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/11/27/技术/文件管理器-右键菜单-注册表/">
+								<i class="fa fa-file"></i>
+								文件管理器-右键菜单-注册表
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+						
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/把头埋在沙子里/">
+								<i class="fa fa-file"></i>
+								把头埋在沙子里
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								故事
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/2020/11/26/故事/嫦娥/">
+								<i class="fa fa-file"></i>
+								嫦娥
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+						
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/演员之死/">
+								<i class="fa fa-file"></i>
+								演员之死
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/王校长落马记/">
+								<i class="fa fa-file"></i>
+								王校长落马记
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/荒唐言/">
+								<i class="fa fa-file"></i>
+								荒唐言
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/财主家的故事/">
+								<i class="fa fa-file"></i>
+								财主家的故事
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/2020/12/01/路灯光/">
+								<i class="fa fa-file"></i>
+								路灯光
+							</a>
+						</li>
+					</ul>
+	
 </div>
 
 
 
-      </div>
+<!-- 最尾部添加，这里就不列以前的代码了 -->
+<div id="toc" style="display: none;"></div>
+<!-- 引入导航 -->
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+		</aside>
+
+	
+
+		<!-- 引入正文 -->
+		<div id="content">
+			<div id="articleList">
+	<ul>
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/兴起/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/兴起/">兴起</a>
+				<div class="article-digest">
+					兴起自习室，遇到好看的小姐姐。一定要假装淡定，目不斜视，内心波涛汹涌。表面波澜不惊。
+纵使你都已经想好了，你们的孩子叫啥名字，也要操持君子的品行。虽然，我知道你内心是个lsp。可是得自我激励——贤贤易
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/压死骆驼的最后一根稻草/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/压死骆驼的最后一根稻草/">压死骆驼的最后一根稻草</a>
+				<div class="article-digest">
+					压死骆驼的最后一根稻草又有一只骆驼倒下了，就在多加了一根稻草后。
+我看着那奄奄一息的骆驼，他背上有如山的稻草，为何会被一根稻草压死。他似乎也看出了我的疑问。喘着最后的气息跟我说：
+我也不知道为什么会倒
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/演员之死/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/演员之死/">演员之死</a>
+				<div class="article-digest">
+					演员之死我第一次见到他的眼睛的时候，还是被震撼到。跟屏幕上看到的完全不同，那是一双很温柔的眼睛，但却无比深邃，就像一个黑洞，可以藏进任何东西。
+“您好，李总，我是临海市刑警大队的副队长张显明，我们有一
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/把头埋在沙子里/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/把头埋在沙子里/">把头埋在沙子里</a>
+				<div class="article-digest">
+					把头埋在沙子里以前有种生物叫做鸵鸟，后来灭绝了。
+据说鸵鸟有个习惯，一遇到事情，就把头埋到沙子里。其实，一开始鸵鸟没有这个习惯。他旁边也没有沙子。
+后来，旁边总是有其他动物找鸵鸟帮着忙，帮那忙。鸵鸟都
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/荒唐言/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/荒唐言/">荒唐言</a>
+				<div class="article-digest">
+					荒唐言财主家要选一个算账的伙计，于是财主家的门庭开始繁忙起来。来来往往的人都要踩着后脚跟了，财主家的门槛都被磨低了一大截。
+这活是个肥差，别看也是要幸幸苦苦加班加点的干。但是能跟掌柜的熟，还掌握着账薄
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/财主家的故事/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/财主家的故事/">财主家的故事</a>
+				<div class="article-digest">
+					财主家的故事财主家要选一个算账的伙计，于是财主家的门庭开始繁忙起来。来来往往的人都要踩着后脚跟了，财主家的门槛都被磨低了一大截。
+这活是个肥差，别看也是要幸幸苦苦加班加点的干。但是能跟掌柜的熟，还掌握
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/路灯光/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/路灯光/">路灯光</a>
+				<div class="article-digest">
+					路灯光我从来都对路灯光有一种莫名的情愫。
+那深夜里，昏暗的路灯光。
+不要太亮，也不要太暗。
+就那样，
+恍恍惚惚。
+是醉人的眼；
+是别离的愁；
+是思念的蛊；
+那远远散去的光；
+是归路还是离途？
+走的到终
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-29</span>
+				<a class="article-read" href="/2020/11/29/创想/产品·手机浏览器/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/29/创想/产品·手机浏览器/">产品·手机浏览器</a>
+				<div class="article-digest">
+					
+早上看到一篇文章，然后为了更好的阅读体验和能过够保存文章，我就又花了一个下午的时间去尝试了各种浏览器，然后，将自己关于手机浏览器的一些想法记录下来。
+
+核心功能打开网页是浏览器的核心功能，所以，做好
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-29</span>
+				<a class="article-read" href="/2020/11/29/创想/好的产品·软件类/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/29/创想/好的产品·软件类/">好的产品·软件类</a>
+				<div class="article-digest">
+					
+我最近两年内一直在重度使用手机，电脑等电子产品。由于经济等因素，主要的体验都是在软件类别上，通过对上千个软件的尝试，觉得抛开经济，能力等因素，单纯的就一个软件而言，怎样才能算一个更好的产品？
+
+好的
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-21</span>
+				<a class="article-read" href="/2020/11/21/关于她/勿忘我/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/21/关于她/勿忘我/">勿忘我</a>
+				<div class="article-digest">
+					勿忘我
 
 
-      </div>
-    </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
 
-        
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">洛洛</span>
+
+
+
+
+当一艘船沉入海!底，当一个人成了迷…
+我躺在地上，身体似乎感觉不到太多疼痛。我想要找到手机。但脖子像被卡住，不能动了。眼睛尽力的向四周瞟去。我是第一次以这种视角来看这个世界的
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-27</span>
+				<a class="article-read" href="/2020/11/27/技术/hexo搭配github使用typora搭建博客/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/27/技术/hexo搭配github使用typora搭建博客/">hexo搭配github使用typora搭建博客</a>
+				<div class="article-digest">
+					hexo
+
+
+参数
+描述
+默认值 &amp;&amp; 说明
+
+
+
+layout
+布局
+config.default_layout
+
+
+title
+标题
+文章的文件名
+
+
+date
+建立日期
+文件建立
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-27</span>
+				<a class="article-read" href="/2020/11/27/技术/文件管理器-右键菜单-注册表/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/27/技术/文件管理器-右键菜单-注册表/">文件管理器-右键菜单-注册表</a>
+				<div class="article-digest">
+					
+Registering Shell Extension Handlers - Win32 apps | Microsoft Docs
+
+注册表原理解析说明_haiross的专栏-CSDN博客_注册表
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-11-26</span>
+				<a class="article-read" href="/2020/11/26/故事/嫦娥/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/11/26/故事/嫦娥/">嫦娥</a>
+				<div class="article-digest">
+					嫦娥号嫦娥不悔偷灵药，碧海青天代代心。
+“十九八七六五四三二一，发射”
+随着嫦娥100号离开地球，飞往月球。指挥室里的所有人都屏住呼吸，死死的盯着屏幕上那传回来的实时影像。
+“飞船轨道正常，飞行偏差小
+					...
+				</div>
+			</li>
+			
+		
+
+			<li class="article-li">
+				<span class="article-date">2020-12-01</span>
+				<a class="article-read" href="/2020/12/01/王校长落马记/"> 阅读全文 </span>
+				<a class="article-title" href="/2020/12/01/王校长落马记/">王校长落马记</a>
+				<div class="article-digest">
+					王校长落马记王校长落马了。
+这是校长秘书刚刚打电话告诉我的，我蹑手蹑脚的起来，没有敢打扰旁边熟睡的情人，稍稍收拾了一下，扔下五千块钱，便打车去了单位。
+当我坐在办公桌前的时候，天已经微微亮了，东方既白
+					...
+				</div>
+			</li>
+			
+		
+	</ul>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+		</div>
+		
+	</div>
 
-        
-
-
-
-
-
+	<!-- 引入代码高亮的 js -->
+	
+<script src="/lib/highlight/highlight.pack.js"></script>
 
 
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+	<!-- 引入 jquery -->
+	
+<script src="/lib/jquery-3.4.1.min.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+	<!-- 引入 pjax -->
+	
+<script src="/lib/jquery.pjax.js"></script>
 
+	
+	<!-- 引入 js 文件 -->
+	
+<script src="/js/main.js"></script>
 
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
 
 </body>
 </html>
