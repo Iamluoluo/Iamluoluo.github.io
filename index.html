@@ -1,5 +1,3 @@
-
-<!-- 引入，include是新式表达，partial旧版，hexo中的表达-->
 <!DOCTYPE html>
 
 
@@ -36,6 +34,21 @@
   
 
   
+
+
+  <!-- 引入配置文件 -->
+  
+<link rel="stylesheet" href="/Iamluoluo.github.io/css/main.css">
+
+
+  <!-- 字体图片库 -->
+  
+<link rel="stylesheet" href="/Iamluoluo.github.io/lib/font-awesome/css/font-awesome.min.css">
+
+
+  <!-- 代码高亮库 -->
+  
+<link rel="stylesheet" href="/Iamluoluo.github.io/lib/highlight/styles/atom-one-dark.css">
 
 </head>
 
@@ -148,7 +161,7 @@
     
     
     <article
-  id="post-演员之死"
+  id="post-文件清单"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -157,7 +170,213 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E6%BC%94%E5%91%98%E4%B9%8B%E6%AD%BB/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/23/%E6%96%87%E4%BB%B6%E6%B8%85%E5%8D%95/" class="article-date">
+  <time datetime="2020-12-23T01:09:33.599Z" itemprop="datePublished">2020-12-23</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h4 id="故事"><a href="#故事" class="headerlink" title="故事"></a>故事</h4><h6 id="未来之人"><a href="#未来之人" class="headerlink" title="未来之人"></a>未来之人</h6><p>朱老师说有一个和我长得相似的人，构想一个多时空的交织的故事</p>
+<h6 id="五分钟"><a href="#五分钟" class="headerlink" title="五分钟"></a>五分钟</h6><p>在去东北之前，我给姜发消息，然后，下飞机后，发现她在我手机关机后五分钟回复了我的消息。</p>
+<p>于是一个轮回（五百年），三个故事的，三大志向。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+</article>
+
+    
+    <article
+  id="post-技术/右键菜单新建文件添加更改"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/"
+    >右键菜单新建文件添加更改</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/" class="article-date">
+  <time datetime="2020-12-22T12:54:56.946Z" itemprop="datePublished">2020-12-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="右键菜单新建文件添加更改"><a href="#右键菜单新建文件添加更改" class="headerlink" title="右键菜单新建文件添加更改"></a>右键菜单新建文件添加更改</h2><blockquote>
+<p>晚上打算写文章时，发现右键菜单里面没有新建md文件的快捷操作。就想着添加右键新建md文件。在网上查找了一下，前面几个方法，都只是说明了如何操作。并没有讲原理。知其然不知其所以然，往往出现了错误，但却不知道怎么该。查询一番后，大致明白了一些原理。记录下来，希望帮助到其他人。</p>
+</blockquote>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理:"></a>原理:</h4><p>右键菜单的修改本质上是修改注册表。</p>
+<h4 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h4><p>修改注册表的方法有两种：</p>
+<ul>
+<li>win+R打开运行，输入regedit。进入注册表编辑器修改。</li>
+<li>运行后缀为.reg的文件</li>
+</ul>
+<h4 id="具体方法及道理："><a href="#具体方法及道理：" class="headerlink" title="具体方法及道理："></a>具体方法及道理：</h4><pre><code>Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\.md]
+@=&quot;Typora.exe&quot;
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+&quot;NullFile&quot;=&quot;&quot;
+[HKEY_CLASSES_ROOT\Typora.exe]
+@=&quot;Markdown&quot;</code></pre>
+<p><code>@=&quot;Typora.exe&quot;</code> 代表的是指定.md文件的运行程序<br><code>@=&quot;Markdown&quot;</code> 代表的是右键时默认的文件名字，这样写新建为<code>新建Markdown.md</code>文件，而且右键菜单中显示 <code>MarkDown</code></p>
+<h6 id="解释一下两种方式的对应关系"><a href="#解释一下两种方式的对应关系" class="headerlink" title="解释一下两种方式的对应关系:"></a>解释一下两种方式的对应关系:</h6><p><code>[HKEY_CLASSES_ROOT.md] </code> 是路径</p>
+<p>这里<code>@="Typora.exe"  </code>相当于修改<code>[HKEY_CLASSES_ROOT.md] </code>中项的值</p>
+<img src="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/image-20201222221900022.png" class title="image-20201222221900022">
+
+
+
+
+
+<p><code>@=ShellNew</code>这个子项。所有有<code>ShellNew</code>子项的扩展名都会出现在【右键-&gt;新建】菜单中。</p>
+<h6 id="ShellNew各项值得意义："><a href="#ShellNew各项值得意义：" class="headerlink" title="ShellNew各项值得意义："></a><code>ShellNew</code>各项值得意义：</h6><ul>
+<li><code>&quot;NullFile&quot;=&quot;&quot;</code>   空文件</li>
+<li><code>FileName </code>新建文件的模版文件</li>
+<li> <code>ItemName </code> 可以修改编码方式（<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e956eaae8828%EF%BC%89">https://www.jianshu.com/p/e956eaae8828）</a></li>
+</ul>
+<h6 id="修改菜单排序"><a href="#修改菜单排序" class="headerlink" title="修改菜单排序:"></a>修改菜单排序:</h6><p>修改后得右键菜单项会显示在：</p>
+<p><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes</code></p>
+<p>所以，在这里可以修改右键新建文件菜单的排序</p>
+<p>新建文件的命名是由打开方式的值决定的，比如</p>
+<pre><code class="Windows">[HKEY_CLASSES_ROOT\.md]
+@=&quot;Typora.md&quot;```</code></pre>
+<p>如果是这么打开方式是这个，则在` Typora.md中修改值，就可以修改新建文件的默认名称。如下图，我的值是洛洛，新建文件名字便是 “新建洛洛.md”。 <img src="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/image-20201222223344275.png" class title="image-20201222223344275"></p>
+<img src="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/image-20201222223203009.png" class title="image-20201222223203009">
+
+
+
+
+
+
+
+
+
+<h6 id="其他一些项："><a href="#其他一些项：" class="headerlink" title="其他一些项："></a>其他一些项：</h6><p>Content Type和PerceivedType百度了一下，大概就是判断文件类型。</p>
+<pre><code class="reg">Windows Registry Editor Version 5.00 
+
+[HKEY_CLASSES_ROOT\.md] 
+@=&quot;Typora.md&quot; 
+&quot;Content Type&quot;=&quot;text/markdown&quot; 
+&quot;PerceivedType&quot;=&quot;text&quot; 
+[HKEY_CLASSES_ROOT\.md\ShellNew] 
+&quot;NullFile&quot;=&quot;&quot;</code></pre>
+<h4 id="附上修改txt默认编码的方式："><a href="#附上修改txt默认编码的方式：" class="headerlink" title="附上修改txt默认编码的方式："></a>附上修改txt<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e956eaae8828">默认编码的方式</a>：</h4><blockquote>
+<p>将 .txt  ShellNew子项修改：</p>
+<img src="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/image-20201222224218237.png" class title="image-20201222224218237">
+
+<img src="/Iamluoluo.github.io/2020/12/22/%E6%8A%80%E6%9C%AF/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9/176987-2f6555b97aac863b.png" class title="img">
+
+
+</blockquote>
+<h4 id="其他知识："><a href="#其他知识：" class="headerlink" title="其他知识："></a>其他知识：</h4><p>使用“—”可以配置文件</p>
+<hr>
+<hr>
+<p>  typora-copy-images-to:media   将图片复制到同目录下media目录中</p>
+<hr>
+<hr>
+<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><p><a target="_blank" rel="noopener" href="https://stepneverstop.github.io/win-rightclick-create-md.html%EF%BC%88work%EF%BC%89">https://stepneverstop.github.io/win-rightclick-create-md.html（work）</a></p>
+<p><a target="_blank" rel="noopener" href="https://ipdtech8.wordpress.com/2020/04/07/how-to-add-markdown-in-windows/%EF%BC%88work%EF%BC%89">https://ipdtech8.wordpress.com/2020/04/07/how-to-add-markdown-in-windows/（work）</a></p>
+<p><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/dd99a381ec3a87c24028c49c.html%EF%BC%88%E8%B0%83%E7%94%A8notepad%E6%9C%AA%E6%B5%8B%E8%AF%95%EF%BC%89">https://wenku.baidu.com/view/dd99a381ec3a87c24028c49c.html（调用notepad未测试）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33873723/article/details/70212265">https://blog.csdn.net/qq_33873723/article/details/70212265</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e956eaae8828">https://www.jianshu.com/p/e956eaae8828</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/" rel="tag">注册表</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+</article>
+
+    
+    <article
+  id="post-Little Story/老王家的耕牛"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/Iamluoluo.github.io/2020/12/12/Little%20Story/%E8%80%81%E7%8E%8B%E5%AE%B6%E7%9A%84%E8%80%95%E7%89%9B/"
+    >老王家的耕牛</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Iamluoluo.github.io/2020/12/12/Little%20Story/%E8%80%81%E7%8E%8B%E5%AE%B6%E7%9A%84%E8%80%95%E7%89%9B/" class="article-date">
+  <time datetime="2020-12-12T05:14:23.000Z" itemprop="datePublished">2020-12-12</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+</article>
+
+    
+    <article
+  id="post-故事/演员之死/演员之死"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/Iamluoluo.github.io/2020/12/01/%E6%95%85%E4%BA%8B/%E6%BC%94%E5%91%98%E4%B9%8B%E6%AD%BB/%E6%BC%94%E5%91%98%E4%B9%8B%E6%AD%BB/" class="article-date">
   <time datetime="2020-12-01T14:25:46.261Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -195,7 +414,7 @@
 
     
     <article
-  id="post-兴起"
+  id="post-Others/兴起"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -204,7 +423,7 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E5%85%B4%E8%B5%B7/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/Others/%E5%85%B4%E8%B5%B7/" class="article-date">
   <time datetime="2020-12-01T14:25:46.249Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -240,7 +459,7 @@
 
     
     <article
-  id="post-压死骆驼的最后一根稻草"
+  id="post-Little Story/压死骆驼的最后一根稻草"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -249,7 +468,7 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E5%8E%8B%E6%AD%BB%E9%AA%86%E9%A9%BC%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%A0%B9%E7%A8%BB%E8%8D%89/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/Little%20Story/%E5%8E%8B%E6%AD%BB%E9%AA%86%E9%A9%BC%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%A0%B9%E7%A8%BB%E8%8D%89/" class="article-date">
   <time datetime="2020-12-01T14:25:21.286Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -295,7 +514,7 @@
 
     
     <article
-  id="post-王校长落马记"
+  id="post-故事/王校长落马记/王校长落马记"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -304,14 +523,14 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E7%8E%8B%E6%A0%A1%E9%95%BF%E8%90%BD%E9%A9%AC%E8%AE%B0/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/%E6%95%85%E4%BA%8B/%E7%8E%8B%E6%A0%A1%E9%95%BF%E8%90%BD%E9%A9%AC%E8%AE%B0/%E7%8E%8B%E6%A0%A1%E9%95%BF%E8%90%BD%E9%A9%AC%E8%AE%B0/" class="article-date">
   <time datetime="2020-12-01T14:25:21.171Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="王校长落马记"><a href="#王校长落马记" class="headerlink" title="王校长落马记"></a>王校长落马记</h3><p>王校长落马了。</p>
+  <h3 id="王校长落马记"><a href="#王校长落马记" class="headerlink" title="-王校长落马记"></a>-王校长落马记</h3><p>王校长落马了。</p>
 <p>这是校长秘书刚刚打电话告诉我的，我蹑手蹑脚的起来，没有敢打扰旁边熟睡的情人，稍稍收拾了一下，扔下五千块钱，便打车去了单位。</p>
 <p>当我坐在办公桌前的时候，天已经微微亮了，东方既白，像翻着肚皮的死鱼。我从抽屉里拿出一盒烟，抽出一根，却怎么也找不到打火机。</p>
 <p>“这次还是狼来了？”我推开椅子，在不大 的办公室里来回踱着。这办公室却是有些寒酸，上次老家的亲戚来找我，他一进门后的，眼神瞬间由期待变得失望。这也不怪他，谁能想到堂堂一个市的文化局局长，办公室竟然这么寒酸。也不是因为我们没钱，正是因为太有钱了，所以，才要显得没钱。这是王校长的政治智慧。王校长特别喜欢这一套，每次政治作秀都能够博得群众的好评，电视台的采访，他就待在自己那间简朴的小办公室里，用带着口音的普通话，说着我前天晚上写好的稿子。稍微有些分辨能力的人都会感到虚假，但是老百姓就吃这一套。市政府前段时间建立一座新的政府楼，许多下面的部门都搬过去了，就是市长和市委主要成员还留在这九十年代的老楼里。外面马上就传出响应，市长真是不忘初心，艰苦奋斗，把优良的条件都留给后生。我是知道的，他一个月在他那间破办公室里待不了两个小时，而那两个小时都是为了应付市电视台每月的市长连线。我有时候在想，我们市长如果进军演艺圈，一定是个实力派演员。可比那些电视上的小鲜肉强多了。其实不能说市长没有进军演艺圈，只是他的进军目标不是当上演员，而是上演员。</p>
@@ -333,13 +552,13 @@
 <p>“那个，太阳呀！”温露露打了我一下，她这种娇态很有魅力，几乎是个男人都会被她这样的姿态拜倒。我当初就是这样，在这里迷倒在她那千姿百态的女人的味道下。不过这一次我瞬间一个哆嗦，清醒了不少，之前的疲倦瞬间灰飞烟灭。</p>
 <p>我赶紧把她拉过来，坐在旁边，压低嗓子，对她说：“别乱说呀，我今天下午刚见了他，你哪来的消息，不要啥话都说。搞不好，咋俩都要进去的。”</p>
 <p>她挽上我的胳膊，屁股向我这边挪了挪，头几乎要靠在我的肩上了。然后，压低了声音。</p>
-<p>“我没有乱说，确实是要落了，我第一时间得知这个消息，就赶紧过来跟你说了，你可以要赶紧想好出路呀，别到时候，拔了萝卜带出泥，这到时候，要是没有处理好，咋俩可少不了几年的。”</p>
-<p>我瞬间意识到了问题的严重性，似乎真的要变天了。”谁跟你说的，消息确定可靠吗？不然到时候，萝卜好好的，咋俩被萝卜榨干了！”我转过头去，盯着温露露，想要从她的脸上找到一点开玩笑的踪迹，可是我失败了。我没有找到任何一点玩笑的痕迹，虽然，我知道，她是不可能也不敢跟我开这种玩笑的。</p>
-<p>“是小朱跟我说的，小朱认识一个省纪检委的一个处长，那处长知道小朱是我们市的，有次喝醉酒在床上就跟小朱打趣到，你别跟你们市的那位有啥牵扯，这次省里可是有人要搞到他。后来，小朱各种旁敲侧击，确定这件事八九不离十。所以，就赶紧告诉我，让我跟赶紧处理好”后事“。”</p>
+<p>“我没有乱说，确实是要落了，我第一时间得知这个消息，就赶紧过来跟你说了，你可以要赶紧想好出路呀，别到时候，拔了萝卜带出泥，到那个时候，要是没有处理好，咋俩可少不了几年的。”</p>
+<p>我瞬间意识到了问题的严重性，似乎真的要变天了。“谁跟你说的，消息确定可靠吗？不然到时候，萝卜好好的，咋俩被萝卜榨干了！”我转过头去，盯着温露露，想要从她的脸上找到一点开玩笑的踪迹，可是我失败了。我没有找到任何一点玩笑的痕迹，虽然，我知道，她是不可能也不敢跟我开这种玩笑的。</p>
+<p>“是小朱跟我说的，小朱认识一个省纪检委的一个处长，那处长知道小朱是我们市的，有次喝醉酒在床上就跟小朱打趣到，你别跟你们市的那位有啥牵扯，这次省里可是有人要搞他。后来，小朱各种旁敲侧击，确定这件事准确无疑。所以，就赶紧告诉我，让我跟赶紧处理好‘后事’。”</p>
 <p>“小朱？”我一时间记不起是哪个人。我不敢确定这个人到底靠不靠谱，就有些疑惑的看向温露露。</p>
 <p>“小朱呀！”温露露把身子稍微坐直起来，然后，又拍了我一下。“您可真是贵人多忘事，当初你还盯着人家看了好久。”温露露白了我一眼，继续说道。</p>
 <p>“不就是之前在我手下当报道记者的那个，去年我推荐到省里去工作的，临走前，您还特意要送送人家呢！”</p>
-<p>“奥奥！是她呀！她怎么会和省里纪检的人走到一起？“我想确保这条信息的准确性，再次追问道。思绪同时回到了三年之前，朱雨，一个韵味十足的女人。三年前，她刚从大学毕业，就凭借着优秀的成绩和杰出的能力进入了市电视台实习，第一次见到她还是在屏幕上，市台里每周都会有一次民政访谈，对市各局委的主要领导进行采访，之前都是温露露和方正主持的。而我，有时间的时候都会看一看这档节目。看一看我的那些同僚们都有什么伟大的抱负与理想。实际上好多人都是按着，照本宣科的去读着那些官话，这种话听多了，大家都会觉得无趣，所以，采访者如何让这样一个无聊的访谈变得稍微不那么无聊，还是很考验参访者的能力的。虽然，这活不好干，但能接触到很多高官，很多人都还是很愿意去干的。不过，温露露一直都不放心放手让其他人去干，因为这事</p>
+<p>“奥奥！是她呀！她怎么会和省里纪检的人走到一起？”我想确保这条信息的准确性，再次追问道。思绪同时回到了三年之前，朱雨，一个韵味十足的女人。三年前，她刚从大学毕业，就凭借着优秀的成绩和杰出的能力进入了市电视台实习，第一次见到她还是在屏幕上，市台里每周都会有一次民政访谈，对市各局委的主要领导进行采访，之前都是温露露和方正主持的。而我，有时间的时候都会看一看这档节目。看一看我的那些同僚们都有什么伟大的抱负与理想。实际上好多人都是按着，照本宣科的去读着那些官话，这种话听多了，大家都会觉得无趣，所以，采访者如何让这样一个无聊的访谈变得稍微不那么无聊，还是很考验参访者的能力的。虽然，这活不好干，但能接触到很多高官，很多人都还是很愿意去干的。不过，温露露一直都不放心放手让其他人去干，因为这事情，干得好，也没什么特别亮点的地方，但要是错了岔子，那可是要得罪人的。一般的人，尤其是年轻人，或多或少对这些位高权重的人都有一些敬仰之情。这是人之常情，如果是去某些地方视察，多几个这样的“粉丝”，在场外衬托一下氛围，节目效果就会好很多。可采访不行，这是一对一的采访，提前都是准备好稿子，大家就相当于对口型。要显得庄重，正式。而且一般不能有太多的发挥。年轻人敬仰领导，就很容易脑子发昏，多问一些。这一多问，问题就来了。很多领导没有提请准备，可能就会尬场。有一些确实有演讲能力的，还能应付得来。要是那些酒囊饭袋，就惨了，可能会弄得领导下不来台。前两年，隔壁市台就出了这么一档子事，有档采访的老记者临时没法参加，台里就用了一个新的小伙子，小伙子平时看着挺机灵的。做事有章有法的。台里觉得也是算给年轻人一个机会。谁知道，到直播的时候，大场面，小桌子小伙子紧张了。就问了一些不该问的话题，搞得隔壁市长下不来台。后来因为这事，本来要上去的副台长的仕途，就这么</p>
 <p>我之所以称他为王校长而不是他本来的职称——市长。一来是他确实在我们学校当过校长，而且，他也喜欢别人叫他校长。而来，是因为他喜欢玩文字游戏，总是说一些模棱两可，一语双关的话。刚开始的时候，他说的都是低级的隐喻，稍微有些文化的人，机灵一点都能猜个八九不离十，可是多年的从政生涯和他可能天生这方面的才能。他的话术变得令人捉摸不透，深不可测。有时候，谈笑间简简单单的一句话，就有很多信息。而这些信息你要注意去搜寻，要从他的一举一动从补充。也许一个皱眉，那么当时的话可能就内涵玄机，也许突然的一句问候，就是在提醒你一些事情。</p>
 <p>而这次，我从未见他说过这么多话。而且，说有些话前，他明显有停顿，像是在思考什么。这些都是要值得注意的，可能一句话中，就含着改变我仕途的信息。我记得很清楚的一次，他和我们几个局长一起吃饭，然后，吃着吃着，突然说，这菜上面看着还行，下面可是太油了。当时其他几位没有意识都他这是话里有话，都随声附和着，有些还慷慨激愤的说，现在这年轻人，都不懂得节约，当初他们生活多么艰苦，但还是不忘奋斗。</p>
 <p>我跟了他多年，当年在学校的时候就知道他喜欢说一些隐晦的话。这次饭菜虽然确实不是很清单，但也没有到达他说的油太多，况且，市委的厨子都是特殊招聘进来的，虽然说不能和古时候皇上的御厨相比，但是做菜的手艺在本省绝对也是一流的，不会说做出这种让人觉得太过反感的菜。</p>
@@ -373,7 +592,7 @@
 
     
     <article
-  id="post-路灯光"
+  id="post-Others/路灯光"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -382,7 +601,7 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E8%B7%AF%E7%81%AF%E5%85%89/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/Others/%E8%B7%AF%E7%81%AF%E5%85%89/" class="article-date">
   <time datetime="2020-12-01T14:25:20.949Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -445,7 +664,7 @@
 
     
     <article
-  id="post-荒唐言"
+  id="post-Little Story/荒唐言"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -454,7 +673,7 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E8%8D%92%E5%94%90%E8%A8%80/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/Little%20Story/%E8%8D%92%E5%94%90%E8%A8%80/" class="article-date">
   <time datetime="2020-12-01T14:25:20.856Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -489,7 +708,7 @@
 
     
     <article
-  id="post-财主家的故事"
+  id="post-Little Story/财主家的故事"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -498,7 +717,7 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E8%B4%A2%E4%B8%BB%E5%AE%B6%E7%9A%84%E6%95%85%E4%BA%8B/" class="article-date">
+      <a href="/Iamluoluo.github.io/2020/12/01/Little%20Story/%E8%B4%A2%E4%B8%BB%E5%AE%B6%E7%9A%84%E6%95%85%E4%BA%8B/" class="article-date">
   <time datetime="2020-12-01T14:25:20.728Z" itemprop="datePublished">2020-12-01</time>
 </a>    
     </div>
@@ -532,201 +751,6 @@
 </article>
 
     
-    <article
-  id="post-把头埋在沙子里"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/12/01/%E6%8A%8A%E5%A4%B4%E5%9F%8B%E5%9C%A8%E6%B2%99%E5%AD%90%E9%87%8C/" class="article-date">
-  <time datetime="2020-12-01T14:25:20.701Z" itemprop="datePublished">2020-12-01</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="把头埋在沙子里"><a href="#把头埋在沙子里" class="headerlink" title="把头埋在沙子里"></a>把头埋在沙子里</h2><p>以前有种生物叫做鸵鸟，后来灭绝了。</p>
-<p>据说鸵鸟有个习惯，一遇到事情，就把头埋到沙子里。其实，一开始鸵鸟没有这个习惯。他旁边也没有沙子。</p>
-<p>后来，旁边总是有其他动物找鸵鸟帮着忙，帮那忙。鸵鸟都帮，但帮完后，大家又说打扰鸵鸟，不应该找鸵鸟的。有一次，鸵鸟在把东西丢在沙滩上了。他在沙子里找的时候，有动物又来找他。他没听见，后来，鸵鸟喜欢把头埋在沙子里的说法就传扬开了。</p>
-<p>至于鸵鸟是怎么灭绝的。那是因为，鸵鸟实在想证明自己的头不在沙子里，于是，就打算把头拿下来，挂在高高的树上。但他忘了，头拿下来，就活不了了。于是他长长的脖子就倒在沙地上，大家就更加确定，鸵鸟的头是埋在沙子里的了。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-   
-   
-</article>
-
-    
-    <article
-  id="post-创想/好的产品·软件类"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Iamluoluo.github.io/2020/11/29/%E5%88%9B%E6%83%B3/%E5%A5%BD%E7%9A%84%E4%BA%A7%E5%93%81%C2%B7%E8%BD%AF%E4%BB%B6%E7%B1%BB/"
-    >好的产品·软件类</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/11/29/%E5%88%9B%E6%83%B3/%E5%A5%BD%E7%9A%84%E4%BA%A7%E5%93%81%C2%B7%E8%BD%AF%E4%BB%B6%E7%B1%BB/" class="article-date">
-  <time datetime="2020-11-29T08:38:27.000Z" itemprop="datePublished">2020-11-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <blockquote>
-<p>我最近两年内一直在重度使用手机，电脑等电子产品。由于经济等因素，主要的体验都是在软件类别上，通过对上千个软件的尝试，觉得抛开经济，能力等因素，单纯的就一个软件而言，怎样才能算一个更好的产品？</p>
-</blockquote>
-<p><strong>好的产品，要有两个面孔。对于普通大多数不喜欢折腾的用户和比较喜欢折腾的用户都提供优秀的体验</strong></p>
-<p>**普通用户 :</p>
-<p>这些用户是产品的绝大多数的使用者，他们需要一个体验很好的软件，满足自己的主要功能。而产品的盈利也主要来源于给他们提供好的服务。所以，一个产品在第一界面和功能上应该是面向此类用户的。</p>
-<p>折腾用户：</p>
-<p>此类用户喜欢折腾与探究，使得产品满足自己更多的功能和需求，这类用户可以共同维护，产生更好的产品功能与体验，所以，产品的设计应该提供他们创造更多可能的途径。**</p>
-<h4 id="软件定位"><a href="#软件定位" class="headerlink" title="软件定位"></a>软件定位</h4><p>软件的定位一定要清晰，本质上应该是要解决一类问题，那么做好核心功能是重中之重，但是，在核心功能外的延拓也是必不可少的。所以，首先要有一个清晰的定位，开发一个产品的目的是为了解决什么问题，同时关注问题的发展与变换。及时的跟进与跟新。这是做好产品要思考的第一个问题。</p>
-<p> 比如，一款输入法的首要目的是进行输入，那么首先要考虑清楚的就是目标范围，要做的就是中文输入还是日语输入。这个问题一般看上去似乎很简单，但实际上，清晰的定位并不是个简单的事情。只有定位清楚目标，才能更好的分清楚功能，交互等安排。</p>
-<h4 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h4><p>知道软件定位后，一定要弄清楚的第二个问题是——核心功能。噱头，营销，可能会取得良好的收益等其他目的，但得不到真正好的产品。但是要知道什么是核心功能，第一件事就是定位要明确。</p>
-<p>以中文输入法为例，核心功能就是输入，中文的输入。那么产品的首要目的就是使得用户能够更快、更方便、更准确的输入。那要做的事情就是优化输入联想功能，可以从大数据中获得常用词，或者建立个人的词库。大数据的词库，对于用户第一次使用体验有着极大的影响，决定了用户是否想继续使用这款产品，而用户个人的数据库，则能够使得用户对产品的依赖。随着用户使用时间的增长，输入准确性提高。这样，用户如果切换到其他同类产品，就能感受到本产品在使用准确性的优势。</p>
-<h4 id="界面和交互"><a href="#界面和交互" class="headerlink" title="界面和交互"></a>界面和交互</h4><h6 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h6><p>界面是一个产品体验的关键因素，据不科学研究表明，一个人见面不到1秒内就会对一个人产生感觉的分类，喜欢或者厌恶。好的颜值不论在人或者产品身上都是至关重要的，如果很丑，可能你都没有机会展示自己的内在，就会错过。所以，界面和交互，是产品吸引力的重要因素。所以，首先要提供给用户一个或者多个符合多数人或者不同目标群体的界面。</p>
-<p>以输入法为例，在默认皮肤上应该给很多人眼前一亮的感觉，提供几套不同类型好看的皮肤，比如，简约，卡通，炫酷。在使用前让用户选择自己的喜好。</p>
-<p>同时，给界面更多的可能性，相比其他输入法，百度皮肤的可能性就要优秀很多，这样能够给产品的界面更多可能。对于折腾用户提供了一个创造的接口。同时应该提供一个良好的创造平台，让更多人能从创造中获利。在这一点上，百度输入法并没有做到，甚至都没有一个好的论坛。主要都在在酷安等其他途径获得皮肤的创造，而且，百度输入法虽然提供了皮肤创造的可能，却连工具都没有好好做，甚至没有说明。</p>
-<h6 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h6><p>交互也是重要的一个环节，那些功能比较常用，如何更方便的操作，这是很重要的一点，很多产品具有很多好的功能，但在交互上设计的不可描述，导致体验极差。如我文初所说，提供给大多数用户一个简单的初始界面，同时还应提供更多的可定制性功能。</p>
-<p>交互的设计首先就是要考量用户的使用习惯，输入法中，很多地方其实都是一样的，但比如输入键的位置，标点符号的位置，在输入过程中会影响用户的体验，同样应该多设计几套初始方案，并给用户简单可以调整的可能。</p>
-<h4 id="更多功能"><a href="#更多功能" class="headerlink" title="更多功能"></a>更多功能</h4><p>产品会随着时间变换，有相应新的需求与改动，那么新的功能和改动应该随着而来，并且实时关注不同的用户体验和反馈，吸收同类产品好的地方，这样才能使得产品朝着一个良好的方向发展。</p>
-<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><p>以输入法为例，假如我要做一个输入法，我有那些需要改进的地方。</p>
-<p>现在我主要使用是是百度输入法，同时试过一些其他输入法，在此提出一些自己看法。</p>
-<p>首先，几个大厂的输入法在核心输入功能上依靠大数据做的还是相当可以的。这一点上是特别好的，支持九键，24键，14键等方面都比较普遍。在九键输入上对准确性的优化是需要注意的一点。</p>
-<p>界面上，百度的输入法，可定制性确实很高，但是百度界面开发软件的更新和维护几乎是零。对于社区的维护也是没有的。可以优化一个好一点的界面开发软件，让大多数人都有能力去设计自己的皮肤，其次可以设置一个比较好的商城和社区，让开发者有正规的渠道沟通交流。</p>
-<p>在交互上，可以添加界面手势功能，滑动输入功能，提供更好的交互体验。</p>
-<p>其他功能上，bd输入法做了很多好的尝试，但都没有做好。</p>
-<ol>
-<li><p>通知栏剪贴板功能的体验性还是相当可以，但是既然剪贴板可以存放大量信息，为什么不设计搜索功能呢（搜索剪贴板内容）？百度同时设计了一个直接搜索的功能，其实这个功能更好的是调用系统的浏览器打开，或者自己设计一个与浏览器互动的功能。</p>
-</li>
-<li><p>同时设计了便签功能，但这个便签使用真的是一言难尽。悬浮窗打开确实可以，同时可以考虑从图标打开，并且，便签功能并未做好，稍微改进一下，做一些分类功能会更好，桌面小插件。</p>
-</li>
-<li><p>语音速记功能可以和便签进行整合，进入语音速记的方式真的很难找到。</p>
-</li>
-<li><p>同步能力，应该是因为放弃pc端了，所以，pc端的百度输入法完全没有更新，而QQ输入法的剪贴板同步功能在百度输入法中完全没有。</p>
-</li>
-<li><p>翻译，ocr，表情等功能可以直接通过输入模式进入，比如，要翻译为英语，可以直接输入翻译 <em>要翻译的文字</em>  实现。</p>
-</li>
-</ol>
-<h6 id><a href="#" class="headerlink" title></a></h6><h4 id="-1"><a href="#-1" class="headerlink" title></a></h4> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E4%BA%A7%E5%93%81/" rel="tag">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E6%A6%82%E5%BF%B5/" rel="tag">概念</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-</article>
-
-    
-    <article
-  id="post-创想/产品·手机浏览器"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Iamluoluo.github.io/2020/11/29/%E5%88%9B%E6%83%B3/%E4%BA%A7%E5%93%81%C2%B7%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8/"
-    >产品·手机浏览器</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Iamluoluo.github.io/2020/11/29/%E5%88%9B%E6%83%B3/%E4%BA%A7%E5%93%81%C2%B7%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8/" class="article-date">
-  <time datetime="2020-11-29T08:35:19.000Z" itemprop="datePublished">2020-11-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <blockquote>
-<p>早上看到一篇文章，然后为了更好的阅读体验和能过够保存文章，我就又花了一个下午的时间去尝试了各种浏览器，然后，将自己关于手机浏览器的一些想法记录下来。</p>
-</blockquote>
-<h4 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h4><p>打开网页是浏览器的核心功能，所以，做好打开网页功能是首要的任务，打开速度和加载的形式都是很重要的功能。</p>
-<h4 id="界面交互"><a href="#界面交互" class="headerlink" title="界面交互"></a>界面交互</h4><p>首先界面的好看性和交互性很重要，而颜值来说，支持自定义是很重要的一方面。而浏览器给人的第一颜值就在于主页的设计。其次是功能区的设计，这两方面，夸克和灯塔浏览器的设计我比较喜欢。</p>
-<p>其次，适配全面屏和去掉状态栏和输入栏也很影响使用的体验。能够提供更大的视野与更简单的界面始终是件让人舒服的事情，神奇浏览器的界面的适配在我使用中比较舒服。</p>
-<p>动画的加入可以使得过度更加舒畅，让人有更优良的体验。</p>
-<p>交互方面，由于现在手机都偏大，一个手无法操作整个界面，所以，首页的输入框在中下的位置会比较舒服，而功能栏在下侧或者可以放在侧面（可能会与手势冲突）。当然提供一个自定义的方式是更好的选择。kiwi，谷歌等浏览器上方的标签页在大屏上体验并不是很好。</p>
-<p>主要的一下功能放在主要菜单选项里，其余的可以放在其他位置，或者二级菜单。（我比较支持其他位置，比起二级菜单，少操作一次的感觉还是很好的），可以参考神奇浏览器右上角的下拉功能或者夸克的二级菜单。</p>
-<p>手势的支持会带来不一样的体验，左右滑动前进后退，但要注意位置和体验感。</p>
-<h4 id="附件功能"><a href="#附件功能" class="headerlink" title="附件功能"></a>附件功能</h4><p>edge和chrome在pc端的优良表现，使得手机选择这两款应用有更好的同步体验，但这两款软件手机端的体验并不很好。</p>
-<p>可以试着支持chrome的插件，阅读类插件在手机端体验并不好，优化插件展示的形式。</p>
-<p>广告拦截，是提升用户体验的一大利器，如何更好的拦截广告是值得注意的。</p>
-<p>阅读模式，在众多阅读模式中，我最终还是觉得神奇浏览器的阅读模式比较好，但可惜的是，我想要将这种舒服的排版导出到pdf或者图片，却没有找到这个功能。阅读模式的体验主要就是几点：</p>
-<ul>
-<li>字体（大小、样式）</li>
-<li>段落</li>
-<li>翻页的方式</li>
-<li>背景</li>
-<li>书架模式等其他</li>
-</ul>
-<p>视频观看是很多用户的需求，我不怎么喜欢手机看视频，但确实是很大一块需求，在这一点上，雨见浏览器强大的能力值得参考，对默认视频播放工具的改进是必须的。</p>
-<p>下载管理和视频缓存功能中应该参考管理类软件，让用户有更良好的体验。</p>
-<p>其他专业类的功能，比如调试，开发等，提供相应的接口。能够使得软件变得更好。</p>
-<p>夸克的ocr功能确实不错，但我觉得这不应该是浏览器该做的的事情，而应该是办公学习类软件的事情。</p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>总的来说，是很难找到一款让我满意的软件，现在主要使用，夸克做日常的搜索和下载，edge偶尔同步页面。而神奇浏览器好看的阅读界面让我在阅读网站文章时会想到它。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E4%BA%A7%E5%93%81/" rel="tag">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Iamluoluo.github.io/tags/%E6%89%8B%E6%9C%BA%E8%BD%AF%E4%BB%B6/" rel="tag">手机软件</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-</article>
-
-    
   </article>
   
 
@@ -744,7 +768,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020
+        2020-2021
         <i class="ri-heart-fill heart_icon"></i> 洛洛
       </li>
     </ul>
@@ -800,6 +824,274 @@
     </main>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
+
+<!-- 搜索栏 -->
+<div id="search">
+	<input class="search-input" type="text" placeholder="search">
+	<i id="search-icon" class="fa fa-bars" title="切换目录与索引">
+</div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+	
+
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								Little Story
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Little Story/压死骆驼的最后一根稻草/">
+								<i class="fa fa-file"></i>
+								压死骆驼的最后一根稻草
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Little Story/把头埋在沙子里/">
+								<i class="fa fa-file"></i>
+								把头埋在沙子里
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/12/Little Story/老王家的耕牛/">
+								<i class="fa fa-file"></i>
+								老王家的耕牛
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Little Story/荒唐言/">
+								<i class="fa fa-file"></i>
+								荒唐言
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Little Story/财主家的故事/">
+								<i class="fa fa-file"></i>
+								财主家的故事
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								Others
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Others/兴起/">
+								<i class="fa fa-file"></i>
+								兴起
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/Others/路灯光/">
+								<i class="fa fa-file"></i>
+								路灯光
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								关于她
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/21/关于她/勿忘我/">
+								<i class="fa fa-file"></i>
+								勿忘我
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								创想
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/29/创想/产品·手机浏览器/">
+								<i class="fa fa-file"></i>
+								产品·手机浏览器
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/29/创想/好的产品·软件类/">
+								<i class="fa fa-file"></i>
+								好的产品·软件类
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								技术
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/27/技术/hexo搭配github使用typora搭建博客/">
+								<i class="fa fa-file"></i>
+								hexo搭配github使用typora搭建博客
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/22/技术/右键菜单新建文件添加更改/">
+								<i class="fa fa-file"></i>
+								右键菜单新建文件添加更改
+							</a>
+						</li>
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/27/技术/文件管理器-右键菜单-注册表/">
+								<i class="fa fa-file"></i>
+								文件管理器-右键菜单-注册表
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								故事
+							</a>
+							
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								嫦娥
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/11/26/故事/嫦娥/嫦娥/">
+								<i class="fa fa-file"></i>
+								嫦娥
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								演员之死
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/故事/演员之死/演员之死/">
+								<i class="fa fa-file"></i>
+								演员之死
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="directory">
+							<a href="#" class="directory">
+								<i class="fa fa-folder"></i>
+								王校长落马记
+							</a>
+							
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/01/故事/王校长落马记/王校长落马记/">
+								<i class="fa fa-file"></i>
+								王校长落马记
+							</a>
+						</li>
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+						</li>
+
+					</ul>
+	
+					<ul>
+						<li class="file">
+							<a href="/Iamluoluo.github.io/2020/12/23/文件清单/">
+								<i class="fa fa-file"></i>
+								文件清单
+							</a>
+						</li>
+					</ul>
+	
+</div>
+
+
+
 <nav class="navbar">
   
   <div class="logo">
@@ -1085,6 +1377,26 @@
 
     
   </div>
+
+  <!-- 引入代码高亮的 js -->
+  
+<script src="/Iamluoluo.github.io/lib/highlight/highlight.pack.js"></script>
+
+
+  <!-- 引入 jquery -->
+  
+<script src="/Iamluoluo.github.io/lib/jquery-3.4.1.min.js"></script>
+
+
+  <!-- 引入 pjax -->
+  
+<script src="/Iamluoluo.github.io/lib/jquery.pjax.js"></script>
+
+
+  <!-- 引入 js 文件 -->
+  
+<script src="/Iamluoluo.github.io/js/main.js"></script>
+
 </body>
 
 </html>
