@@ -1,8 +1,8 @@
 {
-  "title": "请叫我洛洛",
+  "title": "IT Abyss Wiki",
   "subtitle": "",
   "description": "我将在这里与你分享生活中的点点滴滴",
-  "author": "洛洛",
+  "author": "请叫我洛洛吧",
   "language": "zh-CN",
   "timezone": "Asia/Shanghai",
   "url": "https://github.com/Iamluoluo",
@@ -56,7 +56,7 @@
   "updated_option": "mtime",
   "per_page": 10,
   "pagination_dir": "page",
-  "theme": false,
+  "theme": "hexo-wiki",
   "server": {
     "port": 4000,
     "log": false,
@@ -66,7 +66,7 @@
   },
   "deploy": {
     "type": "git",
-    "repo": "git@github.com:Iamluoluo/Iamluoluo.github.io.git",
+    "repo": "",
     "branch": "main"
   },
   "ignore": null,
@@ -109,12 +109,12 @@
     "monthly": true,
     "daily": false
   },
-  "category_generator": {
-    "per_page": 10
-  },
   "search": {
     "path": "search.xml",
     "field": "post"
+  },
+  "category_generator": {
+    "per_page": 10
   },
   "tag_generator": {
     "per_page": 10
@@ -140,29 +140,12 @@
       "nofollow": false
     }
   },
-  "menu": {
-    "Home": "/",
-    "Archives": "/archives"
+  "menus": {
+    "主页": "/",
+    "关于": "/about"
   },
-  "rss": "/atom.xml",
-  "excerpt_link": "Read More",
-  "fancybox": true,
-  "sidebar": "right",
-  "widgets": [
-    "category",
-    "tag",
-    "tagcloud",
-    "archive",
-    "recent_posts"
-  ],
-  "index_widgets": null,
-  "archive_type": "monthly",
-  "show_count": true,
-  "google_analytics": null,
-  "gauges_analytics": null,
-  "favicon": "/favicon.png",
-  "twitter": null,
-  "google_plus": null,
-  "fb_admins": null,
-  "fb_app_id": null
+  "links": {
+    "博客": "https://iamluoluo.github.io",
+    "github": "https://github.com"
+  }
 }
